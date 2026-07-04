@@ -16,7 +16,7 @@ I specialize in building high-performance, low-latency AI pipelines, autonomous 
 *   **Tools:** Git, Linux, Docker 
 
 ### 📈 GitHub Stats
-![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=ahmad3a4&show_icons=true&theme=radical)
+(https://github-readme-stats.vercel.app/api?username=ahmad3a4&show_icons=true&theme=radical)
 
 
 ### 📫 Let's Connect
