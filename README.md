@@ -15,10 +15,6 @@ I specialize in building high-performance, low-latency AI pipelines, autonomous 
 *   **Hardware:** Raspberry Pi, Edge Devices
 *   **Tools:** Git, Linux, Docker 
 
-### 📈 GitHub Stats
-(https://github-readme-stats.vercel.app/api?username=ahmad3a4&show_icons=true&theme=radical)
-
-
 ### 📫 Let's Connect
 *   **LinkedIn:** https://www.linkedin.com/in/ahmad-yaseen-8937942a0/
 *   **Email:** ai.ahmad.3a4@gmail.com
