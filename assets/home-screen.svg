@@ -1,0 +1,190 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 430" width="1200" height="430" role="img" aria-labelledby="title desc">
+  <title id="title">Ahmad Yaseen's home screen</title>
+  <desc id="desc">A console-style home screen whose tiles are Ahmad's projects: BMO, AnyPS5 Launcher, Hopcord, Brackora, AnyPS5 contributions and the ay_os portfolio. The focus moves from tile to tile and shows each project's description.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#11306a"/>
+      <stop offset="0.55" stop-color="#0a1c44"/>
+      <stop offset="1" stop-color="#040a1c"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.82" cy="0.05" r="0.7">
+      <stop offset="0" stop-color="#3f7cff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#3f7cff" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="bmo" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6ee7b7"/><stop offset="1" stop-color="#1fa37a"/></linearGradient>
+    <linearGradient id="launcher" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4f8cff"/><stop offset="1" stop-color="#1d3fa8"/></linearGradient>
+    <linearGradient id="hopcord" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#5b3cc4"/></linearGradient>
+    <linearGradient id="brackora" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fbbf6a"/><stop offset="1" stop-color="#e0742b"/></linearGradient>
+    <linearGradient id="anyps5" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#334a73"/><stop offset="1" stop-color="#15213d"/></linearGradient>
+    <linearGradient id="ayos" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f472b6"/><stop offset="1" stop-color="#b8326e"/></linearGradient>
+    <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+    <filter id="ring" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="6" result="blur"/>
+      <feFlood flood-color="#9cc3ff" flood-opacity="0.85"/>
+      <feComposite in2="blur" operator="in" result="halo"/>
+      <feMerge><feMergeNode in="halo"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="frame"><rect width="1200" height="430" rx="26"/></clipPath>
+  </defs>
+  <style>
+    text { font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; }
+    .tab { font-size: 23px; fill: #8fa6d1; }
+    .tab-on { font-size: 23px; fill: #ffffff; font-weight: 600; }
+    .name { font-size: 19px; fill: #dce7ff; }
+    .role { font-size: 15px; fill: #8fa6d1; }
+    .title { font-size: 48px; fill: #ffffff; font-weight: 300; }
+    .line { font-size: 21px; fill: #c9d6f2; }
+    .meta { font-size: 17px; fill: #79e0b0; }
+    .button { font-size: 19px; fill: #0b1a3a; font-weight: 600; }
+    .hint { font-size: 15px; fill: #7e95c2; }
+    .tile-label { font-size: 15px; fill: #ffffff; font-weight: 600; }
+    .sweep { animation: sweep 14s ease-in-out infinite alternate; }
+    @keyframes sweep { from { transform: translateX(-260px); } to { transform: translateX(380px); } }
+    .dust { animation: drift 9s ease-in-out infinite; }
+    @keyframes drift { 0%, 100% { transform: translateY(0); opacity: 0.25; } 50% { transform: translateY(-18px); opacity: 0.9; } }
+    .focus { animation: focus 18s cubic-bezier(.6,0,.2,1) infinite; }
+    @keyframes focus {
+      0%, 14% { transform: translateX(0); }
+      16.67%, 30.67% { transform: translateX(132px); }
+      33.33%, 47.33% { transform: translateX(264px); }
+      50%, 64% { transform: translateX(396px); }
+      66.67%, 80.67% { transform: translateX(528px); }
+      83.33%, 97.33% { transform: translateX(660px); }
+      100% { transform: translateX(0); }
+    }
+    .hero { opacity: 0; animation: hero 18s linear infinite; }
+    @keyframes hero { 0% { opacity: 0; } 1.5% { opacity: 1; } 15% { opacity: 1; } 16.6% { opacity: 0; } 100% { opacity: 0; } }
+    .h1 { animation-delay: 0s; } .h2 { animation-delay: 3s; } .h3 { animation-delay: 6s; }
+    .h4 { animation-delay: 9s; } .h5 { animation-delay: 12s; } .h6 { animation-delay: 15s; }
+    .hop { animation: hop 1.4s ease-in-out infinite; }
+    @keyframes hop { 0%, 100% { transform: translateY(0); } 45% { transform: translateY(-22px); } }
+    .blink { animation: blink 4s steps(1) infinite; }
+    @keyframes blink { 0%, 92% { opacity: 1; } 93%, 97% { opacity: 0; } 98%, 100% { opacity: 1; } }
+    .cursor { animation: cursor 1.1s steps(1) infinite; }
+    .trophy { opacity: 0; animation: trophy 12s cubic-bezier(.2,.8,.2,1) infinite; animation-delay: 1.5s; }
+    @keyframes trophy { 0% { opacity: 0; transform: translateX(60px); } 6% { opacity: 1; transform: translateX(0); } 55% { opacity: 1; transform: translateX(0); } 62% { opacity: 0; transform: translateX(30px); } 100% { opacity: 0; transform: translateX(30px); } }
+    .trophy-head { font-size: 15px; fill: #f5c451; font-weight: 600; letter-spacing: .3px; }
+    .trophy-text { font-size: 17px; fill: #ffffff; }
+    @keyframes cursor { 0%, 50% { opacity: 1; } 51%, 100% { opacity: 0; } }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="430" fill="url(#sky)"/>
+    <rect width="1200" height="430" fill="url(#glow)"/>
+    <g class="sweep"><ellipse cx="420" cy="250" rx="300" ry="120" fill="#5b8cff" opacity="0.18" filter="url(#soft)"/></g>
+    <g fill="#cfe0ff">
+      <circle class="dust" cx="880" cy="210" r="2.2" style="animation-delay:-1s"/>
+      <circle class="dust" cx="940" cy="300" r="1.6" style="animation-delay:-3s"/>
+      <circle class="dust" cx="1010" cy="240" r="2.6" style="animation-delay:-5s"/>
+      <circle class="dust" cx="1080" cy="320" r="1.8" style="animation-delay:-2s"/>
+      <circle class="dust" cx="1130" cy="200" r="2" style="animation-delay:-7s"/>
+      <circle class="dust" cx="980" cy="370" r="1.4" style="animation-delay:-4s"/>
+      <circle class="dust" cx="1150" cy="380" r="2.4" style="animation-delay:-6s"/>
+      <circle class="dust" cx="860" cy="360" r="1.5" style="animation-delay:-8s"/>
+      <circle class="dust" cx="1050" cy="150" r="1.7" style="animation-delay:-2.5s"/>
+      <circle class="dust" cx="900" cy="130" r="1.3" style="animation-delay:-6.5s"/>
+    </g>
+
+    <text x="60" y="58" class="tab-on">Projects</text>
+    <text x="170" y="58" class="tab">Open source</text>
+    <text x="1078" y="45" class="name" text-anchor="end">Ahmad Yaseen</text>
+    <text x="1078" y="66" class="role" text-anchor="end">Data Science &amp; AI Engineer</text>
+    <circle cx="1118" cy="50" r="24" fill="#2b4f95" stroke="#9cc3ff" stroke-width="2"/>
+    <text x="1118" y="57" text-anchor="middle" style="font-size:18px;fill:#ffffff;font-weight:600">AY</text>
+
+    <g transform="translate(60,92)">
+      <g>
+        <rect width="112" height="112" rx="22" fill="url(#bmo)"/>
+        <rect x="22" y="24" width="68" height="50" rx="10" fill="#c9fbe5"/>
+        <g class="blink"><rect x="37" y="38" width="7" height="11" rx="3" fill="#0f3d2e"/><rect x="68" y="38" width="7" height="11" rx="3" fill="#0f3d2e"/></g>
+        <path d="M44 59 Q56 68 68 59" stroke="#0f3d2e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <text x="56" y="98" class="tile-label" text-anchor="middle">BMO</text>
+      </g>
+      <g transform="translate(132,0)">
+        <rect width="112" height="112" rx="22" fill="url(#launcher)"/>
+        <rect x="22" y="34" width="68" height="36" rx="18" fill="#e6efff"/>
+        <rect x="33" y="48" width="16" height="5" rx="2" fill="#1d3fa8"/><rect x="38.5" y="42.5" width="5" height="16" rx="2" fill="#1d3fa8"/>
+        <circle cx="70" cy="45" r="4" fill="#1d3fa8"/><circle cx="78" cy="53" r="4" fill="#1d3fa8"/><circle cx="62" cy="53" r="4" fill="#1d3fa8"/><circle cx="70" cy="61" r="4" fill="#1d3fa8"/>
+        <text x="56" y="98" class="tile-label" text-anchor="middle">Launcher</text>
+      </g>
+      <g transform="translate(264,0)">
+        <rect width="112" height="112" rx="22" fill="url(#hopcord)"/>
+        <rect x="20" y="70" width="34" height="6" rx="3" fill="#e9e1ff"/><rect x="62" y="56" width="30" height="6" rx="3" fill="#e9e1ff"/>
+        <g class="hop"><rect x="30" y="50" width="16" height="18" rx="4" fill="#ffd166"/><rect x="34" y="55" width="3" height="4" fill="#3b2a7a"/><rect x="40" y="55" width="3" height="4" fill="#3b2a7a"/></g>
+        <circle cx="77" cy="40" r="5" fill="#ffd166"/>
+        <text x="56" y="98" class="tile-label" text-anchor="middle">Hopcord</text>
+      </g>
+      <g transform="translate(396,0)">
+        <rect width="112" height="112" rx="22" fill="url(#brackora)"/>
+        <text x="56" y="66" text-anchor="middle" style="font-size:36px;fill:#ffffff;font-weight:700">[B]</text>
+        <text x="56" y="98" class="tile-label" text-anchor="middle">Brackora</text>
+      </g>
+      <g transform="translate(528,0)">
+        <rect width="112" height="112" rx="22" fill="url(#anyps5)" stroke="#4d6aa3" stroke-width="1.5"/>
+        <path d="M38 38 L26 50 L38 62 M74 38 L86 50 L74 62 M62 34 L50 66" stroke="#9cc3ff" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="56" y="98" class="tile-label" text-anchor="middle">AnyPS5</text>
+      </g>
+      <g transform="translate(660,0)">
+        <rect width="112" height="112" rx="22" fill="url(#ayos)"/>
+        <rect x="24" y="28" width="64" height="46" rx="7" fill="#ffe4f1"/>
+        <rect x="24" y="28" width="64" height="11" rx="5" fill="#ffffff"/>
+        <circle cx="31" cy="33.5" r="2.2" fill="#ff6b6b"/><circle cx="38" cy="33.5" r="2.2" fill="#ffd166"/><circle cx="45" cy="33.5" r="2.2" fill="#06d6a0"/>
+        <text x="33" y="61" style="font-size:13px;fill:#b8326e;font-family:Consolas,monospace">ay_os</text>
+        <rect class="cursor" x="70" y="51" width="7" height="12" fill="#b8326e"/>
+        <text x="56" y="98" class="tile-label" text-anchor="middle">ay_os</text>
+      </g>
+      <g class="focus">
+        <rect x="-7" y="-7" width="126" height="126" rx="27" fill="none" stroke="#ffffff" stroke-width="3.5" filter="url(#ring)"/>
+      </g>
+    </g>
+
+    <g transform="translate(60,0)">
+      <g class="hero h1">
+        <text x="0" y="276" class="title">BMO</text>
+        <text x="0" y="312" class="line">Real-time voice AI companion with a face that shows its feelings</text>
+        <text x="0" y="342" class="meta">Raspberry Pi 5 · Python · voice AI</text>
+      </g>
+      <g class="hero h2">
+        <text x="0" y="276" class="title">AnyPS5 Launcher</text>
+        <text x="0" y="312" class="line">PS5-style home screen and game library for AnyPS5 on Windows</text>
+        <text x="0" y="342" class="meta">Python · Tkinter · open source, MIT</text>
+      </g>
+      <g class="hero h3">
+        <text x="0" y="276" class="title">Hopcord</text>
+        <text x="0" y="312" class="line">A 2D platformer that runs live inside a Discord voice channel</text>
+        <text x="0" y="342" class="meta">Discord Activity · JavaScript</text>
+      </g>
+      <g class="hero h4">
+        <text x="0" y="276" class="title">Brackora</text>
+        <text x="0" y="312" class="line">Founder: bridging complex programming and practical automation</text>
+        <text x="0" y="342" class="meta">AI · automation · web</text>
+      </g>
+      <g class="hero h5">
+        <text x="0" y="276" class="title">AnyPS5 contributor</text>
+        <text x="0" y="312" class="line">Merged a system-library fix into the PS5-to-PC relinker; more in review</text>
+        <text x="0" y="342" class="meta">C++ · FreeBSD semantics · Windows</text>
+      </g>
+      <g class="hero h6">
+        <text x="0" y="276" class="title">ay_os</text>
+        <text x="0" y="312" class="line">My portfolio, rebuilt as a fake operating system desktop</text>
+        <text x="0" y="342" class="meta">HTML · CSS · JavaScript</text>
+      </g>
+      <rect x="0" y="364" width="150" height="44" rx="22" fill="#ffffff"/>
+      <text x="75" y="392" class="button" text-anchor="middle">Explore</text>
+      <circle cx="190" cy="386" r="22" fill="none" stroke="#c9d6f2" stroke-width="2"/>
+      <text x="190" y="392" text-anchor="middle" style="font-size:20px;fill:#c9d6f2;font-weight:700">···</text>
+    </g>
+    <g class="trophy">
+      <rect x="768" y="250" width="380" height="70" rx="16" fill="#0d1a36" fill-opacity="0.85" stroke="#f5c451" stroke-opacity="0.55" stroke-width="1.5"/>
+      <g transform="translate(790,266)">
+        <path d="M6 2 H30 V12 C30 20 25 25 18 25 C11 25 6 20 6 12 Z" fill="#f5c451"/>
+        <path d="M6 5 H1 C1 12 4 15 7 15 M30 5 H35 C35 12 32 15 29 15" stroke="#f5c451" stroke-width="2.5" fill="none"/>
+        <rect x="15" y="25" width="6" height="6" fill="#d9a43b"/>
+        <rect x="9" y="31" width="18" height="5" rx="2" fill="#f5c451"/>
+      </g>
+      <text x="844" y="279" class="trophy-head">TROPHY UNLOCKED</text>
+      <text x="844" y="304" class="trophy-text">First pull request merged into AnyPS5</text>
+    </g>
+    <text x="1140" y="404" class="hint" text-anchor="end">github.com/ahmad3a4</text>
+  </g>
+</svg>
