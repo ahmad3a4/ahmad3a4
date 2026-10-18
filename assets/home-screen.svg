@@ -161,7 +161,7 @@
       </g>
       <g class="hero h5">
         <text x="0" y="276" class="title">AnyPS5 contributor</text>
-        <text x="0" y="312" class="line">Merged a system-library fix into the PS5-to-PC relinker; more in review</text>
+        <text x="0" y="312" class="line">Merged two system-library fixes into AnyPS5; one more in review</text>
         <text x="0" y="342" class="meta">C++ · FreeBSD semantics · Windows</text>
       </g>
       <g class="hero h6">
@@ -183,7 +183,7 @@
         <rect x="9" y="31" width="18" height="5" rx="2" fill="#f5c451"/>
       </g>
       <text x="844" y="279" class="trophy-head">TROPHY UNLOCKED</text>
-      <text x="844" y="304" class="trophy-text">First pull request merged into AnyPS5</text>
+      <text x="844" y="304" class="trophy-text">Two pull requests merged into AnyPS5</text>
     </g>
     <text x="1140" y="404" class="hint" text-anchor="end">github.com/ahmad3a4</text>
   </g>

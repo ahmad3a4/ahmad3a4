@@ -65,7 +65,8 @@ My portfolio, rebuilt as a fake operating-system desktop.
 | | Contribution | Status |
 |---|---|---|
 | 🔧 | [**#5502**](https://github.com/boykopovar/AnyPS5/pull/5502) `sysctlnametomib`: a missing kernel function that stopped a Java 25 homebrew app from loading. Written to match FreeBSD; verified by a contributor and merged by a maintainer. | ![](https://img.shields.io/github/pulls/detail/state/boykopovar/AnyPS5/5502?label=%20) |
-| 🔧 | [**#5831**](https://github.com/boykopovar/AnyPS5/pull/5831) Atomic `O_APPEND` writes on Windows: concurrent appends were losing about 1 in 8 lines. | ![](https://img.shields.io/github/pulls/detail/state/boykopovar/AnyPS5/5831?label=%20) |
+| 🔧 | [**#5831**](https://github.com/boykopovar/AnyPS5/pull/5831) Atomic `O_APPEND` writes on Windows: concurrent appends were losing about 1 in 8 lines. Cross-checked by contributors on Windows and Linux, then merged. | ![](https://img.shields.io/github/pulls/detail/state/boykopovar/AnyPS5/5831?label=%20) |
+| 🔧 | [**#6287**](https://github.com/boykopovar/AnyPS5/pull/6287) The same fix for `fopen`/`freopen` append streams, found through the log of the PS5MC media center, which was losing characters. | ![](https://img.shields.io/github/pulls/detail/state/boykopovar/AnyPS5/6287?label=%20) |
 | 🐞 | [**#5931**](https://github.com/boykopovar/AnyPS5/issues/5931) Found that closing Syobon Action crashed AnyPS5's exit path, then validated the two fixes on Windows. | ![](https://img.shields.io/github/issues/detail/state/boykopovar/AnyPS5/5931?label=%20) |
 | 🎮 | Game bring-up threads: [Java 25 LAN / DNS (#5501)](https://github.com/boykopovar/AnyPS5/discussions/5501), which now starts on AnyPS5, and [Syobon Action (#5932)](https://github.com/boykopovar/AnyPS5/discussions/5932) | |
 
