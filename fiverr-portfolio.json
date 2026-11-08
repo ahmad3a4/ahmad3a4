@@ -1,0 +1,194 @@
+{
+ "projects": [
+  {
+   "slug": "01-bmo",
+   "name": "BMO – Voice AI Companion on Raspberry Pi 5",
+   "industries": [
+    "Artificial intelligence (AI)",
+    "Hardware & Electronics",
+    "Software Development"
+   ],
+   "duration": "THREE_TO_SIX_MONTHS",
+   "month": 6,
+   "year": 2026,
+   "description": "Personal project: a talking, seeing desk companion in a 3D-printed body, powered by a Raspberry Pi 5.\n\nGoal: an assistant that feels alive rather than a voice-command box, and that answers in English or Saudi Arabic.\n\nChallenge: fast replies on small hardware, reliable wake-word and end-of-speech detection with a noisy USB microphone, and natural speech in two languages.\n\nSolution: I built the full pipeline in Python: a custom \"hey bmo\" wake word, webrtcvad endpointing, Whisper speech-to-text, an LLM brain with a local Ollama fallback, and a custom Piper voice with lip-synced faces drawn live in code. On top of that: face and voice recognition, long-term memory, moods and a nightly diary, plus control of a Windows PC, Android TV, Spotify and Home Assistant.\n\nOutcome: speech-to-text takes 0.3–0.5 s and the voice starts about 0.5 s after a reply is ready (measured on the Pi). The spoken language was identified correctly in 42 of 43 real test clips.\n\nBuilt with: Python, Raspberry Pi 5, Whisper, Piper TTS, Ollama, OpenCV, Groq API",
+   "images": [
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/01-bmo-4x3.png"
+   ]
+  },
+  {
+   "slug": "02-hilal",
+   "name": "Hilal – Dynamic Island-Style App for Windows",
+   "industries": [
+    "Religion & Spirituality",
+    "Software Development"
+   ],
+   "duration": "SEVEN_TO_THIRTY_DAYS",
+   "month": 10,
+   "year": 2026,
+   "description": "Personal project, released as a free Windows app with its own installer.\n\nGoal: give Muslims who work at a PC one small pill at the top of the screen for prayer times, music and everyday system info, inspired by the iPhone's Dynamic Island.\n\nChallenge: never miss the azan, even with headphones on, without getting in the way of games, videos or work.\n\nSolution: I built an Electron app with a native helper. It calculates prayer times offline (18 calculation methods, 100+ cities), plays the azan and pauses Spotify, YouTube or any media app, then shows the du'a. It also adds media controls that take their colours from the album art, a per-app volume mixer with brightness control, a CPU/GPU/network monitor, an FPS counter that is safe with anti-cheat, Bluetooth battery alerts and a 16-connection download manager that resumes after a restart.\n\nOutcome: version 1.3 ships with an English/Arabic installer, works offline, and has no account, ads or analytics.\n\nBuilt with: Electron, Node.js, JavaScript, HTML/CSS, Windows media controls",
+   "images": [
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/02-hilal-4x3.png",
+    "https://raw.githubusercontent.com/ahmad3a4/hilal-island/main/docs/screenshots/hero.png",
+    "https://raw.githubusercontent.com/ahmad3a4/hilal-island/main/docs/screenshots/prayer.png",
+    "https://raw.githubusercontent.com/ahmad3a4/hilal-island/main/docs/screenshots/music.png",
+    "https://raw.githubusercontent.com/ahmad3a4/hilal-island/main/docs/screenshots/system.png"
+   ]
+  },
+  {
+   "slug": "03-anyps5-launcher",
+   "name": "AnyPS5 Launcher – Console-Style Game Library",
+   "industries": [
+    "Gaming",
+    "Software Development"
+   ],
+   "duration": "SEVEN_TO_THIRTY_DAYS",
+   "month": 9,
+   "year": 2026,
+   "description": "Open-source desktop app (MIT license) that gives AnyPS5, an open-source project that runs PS5 software on PC, a friendly front end.\n\nGoal: let players add a game and press Play, without running conversion tools by hand.\n\nChallenge: AnyPS5 changes many times a day, and every game has to be converted and checked before it runs.\n\nSolution: I built a Python/Tkinter app with two views: a console-style home screen that works with a keyboard or controller, and a classic library with search, filters and per-game settings. It converts games using hard links (no extra copies), shows how many of the system functions a game needs are already implemented, backs up saves, tracks playtime and frame rate, and installs or builds the newest official AnyPS5 with update alerts and a \"what's new\" list.\n\nOutcome: one-click play with zero third-party dependencies and a unit-tested codebase. It refuses encrypted retail games and ships no Sony files.\n\nBuilt with: Python, Tkinter, Windows, Git, unittest",
+   "images": [
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/03-anyps5-launcher-4x3.png",
+    "https://raw.githubusercontent.com/ahmad3a4/AnyPS5-Launcher/main/docs/screenshots/classic-view.png",
+    "https://raw.githubusercontent.com/ahmad3a4/AnyPS5-Launcher/main/docs/screenshots/console-view.png"
+   ]
+  },
+  {
+   "slug": "04-anyps5-contributions",
+   "name": "AnyPS5 – 3 Merged C++ Open-Source Fixes",
+   "industries": [
+    "Gaming",
+    "Software Development"
+   ],
+   "duration": "ONE_TO_SEVEN_DAYS",
+   "month": 9,
+   "year": 2026,
+   "description": "Open-source contribution to AnyPS5, a project that converts PS5 executables into native PC programs and reimplements the console's system libraries.\n\nGoal: fix bugs that stopped homebrew apps from loading or silently corrupted their output.\n\nChallenge: each fix had to behave like FreeBSD (the console OS's base) while running on Windows, and hold up under concurrent writes.\n\nSolution: three pull requests in C++. #5502 added the missing kernel function sysctlnametomib, which unblocked a Java 25 homebrew app. #5831 made O_APPEND writes atomic on Windows: in my 4-thread test, 1,001 of 8,000 lines were lost before the fix and none after. #6287 applied the same fix to fopen/freopen append streams and added a regression test. I also reported an exit-path crash and validated its fixes.\n\nOutcome: all three were merged by a maintainer in October 2026, after other contributors verified them on Windows and Linux.\n\nBuilt with: C++, C runtime/POSIX APIs, Windows file APIs, CMake, Git",
+   "images": [
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/04-anyps5-contributions-4x3.png"
+   ]
+  },
+  {
+   "slug": "05-zanadir-contribution",
+   "name": "zanadir – Go Contribution to a CI Security Tool",
+   "industries": [
+    "Cybersecurity",
+    "Software Development"
+   ],
+   "duration": "ONE_TO_SEVEN_DAYS",
+   "month": 9,
+   "year": 2026,
+   "description": "Open-source contribution to zanadir, a Go tool that reads a repository's CI configuration and reports which security and quality controls are missing, or set up so they can't fail a build.\n\nGoal: teach zanadir to recognise revive, a widely used Go linter, and judge whether it can actually block a merge.\n\nChallenge: revive exits with code 0 on findings unless -set_exit_status is passed, and a -config file can change that, so simply detecting the tool would overstate its effect. Matching also had to avoid false hits such as revive-db.sh, \"revived\" or a workflow named \"Revive stale issues\".\n\nSolution: I added a detection rule that treats revive as advisory unless it is set to fail the build, and as unknown when a config file decides. The pattern matches a whole path segment, case-sensitively, and I added Go tests for the grading and for 8 match and no-match cases.\n\nOutcome: merged into zanadir's main branch as pull request #461 in October 2026.\n\nBuilt with: Go, YAML rules, regular expressions, CI/CD, unit testing",
+   "images": [
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/05-zanadir-contribution-4x3.png"
+   ]
+  },
+  {
+   "slug": "06-dislocpred",
+   "name": "DislocPred – AI Hip Dysplasia Screening on X-Rays",
+   "industries": [
+    "Artificial intelligence (AI)",
+    "Health Care & Medical Center"
+   ],
+   "duration": "SEVEN_TO_THIRTY_DAYS",
+   "month": 10,
+   "year": 2025,
+   "description": "Medical-imaging AI web app with a fully Arabic interface, built to support screening for developmental dysplasia of the hip (DDH, known in Arabic as \"birth dislocation\").\n\nGoal: turn a pelvic X-ray into a clear, measured result that a doctor can review and share.\n\nChallenge: find the hip landmarks reliably on X-rays, turn them into clinically meaningful angles, and present everything in Arabic, including printable reports.\n\nSolution: I built the pipeline around a YOLOv8 pose model that detects four acetabular landmarks. The app computes the acetabular angle of each hip against a horizontal reference and flags values above 25° and 30°. A Flask web app handles the upload, shows the result for each side, and generates an Arabic PDF report with the patient's details and the doctor's notes.\n\nOutcome: a working end-to-end prototype, from image upload to a downloadable report, designed as decision support for clinicians.\n\nBuilt with: Python, YOLOv8 (Ultralytics), PyTorch, OpenCV, Flask, fpdf2, Arabic RTL",
+   "images": [
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/06-dislocpred-4x3.png",
+    "https://raw.githubusercontent.com/ahmad3a4/Birth-Dislocation-Diagnosis/main/logo.png"
+   ]
+  },
+  {
+   "slug": "07-hopcord",
+   "name": "Hopcord – Multiplayer Platformer in Discord Calls",
+   "industries": [
+    "Game Development",
+    "Gaming"
+   ],
+   "duration": "SEVEN_TO_THIRTY_DAYS",
+   "month": 7,
+   "year": 2026,
+   "description": "Personal project: an original 2D platformer that runs as a Discord Activity, live inside a voice channel, and also as a normal browser game.\n\nGoal: a quick game friends can play together without leaving the call.\n\nChallenge: Discord's Embedded App SDK, OAuth without exposing the app secret to the browser, and live scores shared by everyone in the same call.\n\nSolution: I built the game in Phaser 3 (run-and-jump physics, patrolling enemies, coins and gems, two stages) with Vite, plus an Express and Socket.IO server that exchanges the OAuth code server-side and broadcasts a live leaderboard scoped to each call, or to a shareable room link in browser mode. Levels are plain data files, so new stages are easy to add. Art: Kenney's free CC0 Pixel Platformer pack.\n\nOutcome: one codebase that plays inside Discord or in any browser and deploys as a single Node process.\n\nBuilt with: JavaScript, Phaser 3, Vite, Node.js, Express, Socket.IO, Discord Embedded App SDK",
+   "images": [
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/07-hopcord-4x3.png"
+   ]
+  },
+  {
+   "slug": "08-ay-os-portfolio",
+   "name": "ay_os – Interactive OS-Style Portfolio Website",
+   "industries": [
+    "Software Development",
+    "Technology"
+   ],
+   "duration": "ONE_TO_SEVEN_DAYS",
+   "month": 6,
+   "year": 2026,
+   "description": "Personal project: my portfolio site rebuilt as a fake operating-system desktop, in plain HTML, CSS and JavaScript with no framework and no build step.\n\nGoal: a portfolio that visitors explore instead of scrolling past.\n\nChallenge: OS-style windows are fun on a desktop but awkward on a phone, and the animations have to respect accessibility settings.\n\nSolution: I designed and built a skippable boot sequence, draggable windows with minimize, maximize and close, a dock, and a Ctrl/Cmd+K command palette with keyboard navigation and a few easter eggs. Each window has its own accent colour on a CRT-style terminal theme. Below 900 px the site switches to stacked cards, and visitors who prefer reduced motion skip the animations.\n\nOutcome: a fast static site that can be hosted anywhere, built from a written design spec and implementation plan.\n\nBuilt with: HTML5, CSS3, JavaScript, responsive design, accessibility (keyboard, ARIA)",
+   "images": [
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/08-ay-os-portfolio-4x3.png",
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/08-ay-os-site.png"
+   ]
+  },
+  {
+   "slug": "09-valorant-stats-bot",
+   "name": "Valorant Stats Bot – Discord Bot for Player Stats",
+   "industries": [
+    "Gaming",
+    "Software Development"
+   ],
+   "duration": "SIX_PLUS_MONTHS",
+   "month": 11,
+   "year": 2022,
+   "description": "Personal project: a Discord bot that brings Valorant player stats into any server through slash commands.\n\nGoal: let a gaming community check ranks and matches without leaving Discord.\n\nChallenge: pull data from community APIs quickly for many users, and notify a server when a tracked player's rank changes.\n\nSolution: I built a discord.js v14 bot with 10 slash commands: rank, last 5 matches, lifetime stats, peak rank, regional leaderboard, player comparison, agent and map info, saved Riot IDs and rank tracking. It uses the HenrikDev Valorant API and valorant-api.com, applies per-user cooldowns, keeps data in lightweight JSON storage, and checks tracked players every 5 minutes (up to 10 per server).\n\nOutcome: a public bot anyone can invite, with a verification website and a keep-alive server for free hosting.\n\nBuilt with: Node.js, JavaScript, discord.js v14, REST APIs, JSON storage",
+   "images": [
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/09-valorant-stats-bot-4x3.png",
+    "https://raw.githubusercontent.com/ahmad3a4/valorant-status-bot/master/website/bot_banner.png"
+   ]
+  },
+  {
+   "slug": "10-free-games-discord",
+   "name": "free-games-discord – Free Game Alerts for Discord",
+   "industries": [
+    "Gaming",
+    "Software Development"
+   ],
+   "duration": "ONE_TO_SEVEN_DAYS",
+   "month": 9,
+   "year": 2026,
+   "description": "Open-source tool (MIT license) that posts free game giveaways from Steam, Epic Games Store, GOG, itch.io, Prime Gaming and more to Discord channels.\n\nGoal: a free-games feed that costs nothing to run and needs no bot hosting.\n\nChallenge: merge two data sources without duplicate posts, avoid flooding channels, and remember what was already posted without a database.\n\nSolution: I built a reusable GitHub Action and CLI in Node.js with no dependencies. It combines the GamerPower API with Epic's own free-games feed, removes duplicates, and posts rich webhook messages with the cover, original price, store and end date. State lives in the GitHub Actions cache, and options cover store filters, role mentions, post limits, several channels and dry runs.\n\nOutcome: anyone can set it up in 3 steps on GitHub's free tier, or run it from cron or a Raspberry Pi.\n\nBuilt with: Node.js, JavaScript, GitHub Actions, Discord webhooks, REST APIs",
+   "images": [
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/10-free-games-discord-4x3.png"
+   ]
+  },
+  {
+   "slug": "11-gh-achievements",
+   "name": "gh-achievements – GitHub Badges CLI & README Card",
+   "industries": [
+    "Software Development",
+    "Technology"
+   ],
+   "duration": "ONE_TO_SEVEN_DAYS",
+   "month": 9,
+   "year": 2026,
+   "description": "Open-source command-line tool (MIT license) that shows anyone's GitHub achievements, the tier of each one and how close they are to the next, plus a self-updating badge card for profile READMEs.\n\nGoal: answer \"which badges do I have, and what's next?\", since GitHub has no API for achievements.\n\nChallenge: read achievements reliably from the profile page, estimate progress from the GitHub API, and render a card that displays inside GitHub's README sandbox.\n\nSolution: I built a dependency-free Node.js CLI, also installable as a GitHub CLI extension, that parses the profile HTML, adds progress counts from the GitHub API and prints to the terminal, JSON or SVG. A GitHub Action regenerates the SVG card daily; badge images are shrunk with a small PNG resizer I wrote on Node's zlib and embedded so they load on GitHub.\n\nOutcome: one command for any user, and a profile card that keeps itself up to date.\n\nBuilt with: Node.js, JavaScript, GitHub API, GitHub Actions, SVG",
+   "images": [
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/11-gh-achievements-4x3.png"
+   ]
+  },
+  {
+   "slug": "12-steam-free-claimer",
+   "name": "Steam Free Games Claimer – Python Web App & CLI",
+   "industries": [
+    "Gaming",
+    "Software Development"
+   ],
+   "duration": "SEVEN_TO_THIRTY_DAYS",
+   "month": 7,
+   "year": 2026,
+   "description": "Open-source automation tool that finds games that are temporarily 100% off on Steam and adds them to the user's library in one click.\n\nGoal: never miss a limited-time free game, without copying browser cookies by hand.\n\nChallenge: sign in securely through Steam's own login flow, including Steam Guard two-factor codes, and report every claim honestly.\n\nSolution: I built a Flask web app and a CLI. Passwords are RSA-encrypted locally with Steam's public key, both email and authenticator Steam Guard codes are supported, and credentials are never stored or logged. The tool scans the store for active free promotions, claims each package with the same request as Steam's own button, checks for Steam's real success message instead of trusting the status code, and rate-limits its requests.\n\nOutcome: a local web UI and a terminal tool, ready to deploy on Railway or Render.\n\nBuilt with: Python, Flask, RSA encryption, REST, HTML/CSS/JavaScript",
+   "images": [
+    "https://raw.githubusercontent.com/ahmad3a4/ahmad3a4/fiverr-covers/covers/12-steam-free-claimer-4x3.png"
+   ]
+  }
+ ]
+}
